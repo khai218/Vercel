@@ -15,7 +15,7 @@ const About = () => {
 
         <div className="space-y-5">
           <p className="text-gray-300 text-sm sm:text-base">
-            I'm a recent <strong>Information Technology</strong> graduate from Politeknik Kuching Sarawak with a passion for creating efficient, user-friendly web applications. My journey in tech combines formal education with hands-on project experience.
+            I&apos;m a recent <strong>Information Technology</strong> graduate from Politeknik Kuching Sarawak with a passion for creating efficient, user-friendly web applications. My journey in tech combines formal education with hands-on project experience.
           </p>
 
           <div>
@@ -66,12 +66,6 @@ const About = () => {
             </ul>
           </div>
 
-        {/*
-          <p className="text-gray-300 text-sm sm:text-base">
-            When I'm not coding, I enjoy contributing to open-source projects, participating in hackathons, and continuously expanding my knowledge through online courses and tech communities. "I lie"
-          </p>
-        */}
-        
         </div>
 
         {/* Glowing effect on hover */}

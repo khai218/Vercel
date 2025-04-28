@@ -10,7 +10,7 @@ const Profile = () => {
 
       <div className="relative z-10 text-white space-y-3">
         <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          {"Hello, I'm Khairulazhar, still Intern"}
+          Hello, I&apos;m Khairulazhar, still Intern
         </h1>
         
         <p className="text-gray-300">
@@ -19,7 +19,7 @@ const Profile = () => {
         
         <p className="text-gray-300">
           Passionate about building modern web applications and currently exploring 
-          AI/ML technologies to expand my skill set. I'm particularly interested in 
+          AI/ML technologies to expand my skill set. I&apos;m particularly interested in 
           how artificial intelligence can enhance web development workflows and user experiences.
         </p>
         

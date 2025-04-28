@@ -10,7 +10,7 @@ const Profile = () => {
 
       <div className="relative z-10 text-white space-y-3">
         <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Hello, I'm Khairulazhar, The Intern
+          {"Hello, I'm Khairulazhar, still Intern"}
         </h1>
         
         <p className="text-gray-300">

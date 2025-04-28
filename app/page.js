@@ -35,7 +35,7 @@ export default function Home() {
       <main className="relative min-h-screen">
         {/* Background with blur overlay */}
         <div className="fixed inset-0 -z-10">
-          <img 
+          <Image
             src="/wallpaper.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"

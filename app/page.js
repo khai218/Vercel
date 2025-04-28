@@ -6,6 +6,7 @@ import Profile from "./components/profile";
 import About from "./components/about";
 import Experience from "./components/experience";
 import Contact from "./components/contact";
+import Image from "next/image";
 
 // Animation variants
 const container = {

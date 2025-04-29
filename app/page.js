@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Profile from "./components/profile";
@@ -7,6 +8,7 @@ import About from "./components/about";
 import Experience from "./components/experience";
 import Contact from "./components/contact";
 import Image from "next/image";
+import PageLoader from "./components/PageLoader";
 
 // Animation variants
 const container = {
@@ -25,6 +27,37 @@ const item = {
 };
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Option 1: Simple timeout (2 seconds)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    // Option 2: Wait for background image to load (uncomment to use)
+    /*
+    const img = new Image();
+    img.src = '/wallpaper.jpg';
+    img.onload = () => setIsLoading(false);
+    */
+
+    // Option 3: Wait for all page assets (uncomment to use)
+    /*
+    const handleLoad = () => setIsLoading(false);
+    if (document.readyState === 'complete') {
+      setIsLoading(false);
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    */
+
+    return () => {
+      clearTimeout(timer);
+      // window.removeEventListener('load', handleLoad); // For Option 3
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -33,13 +66,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
+      {isLoading && <PageLoader />}
+
       <main className="relative min-h-screen">
         {/* Background with blur overlay */}
         <div className="fixed inset-0 -z-10">
           <Image
             src="/wallpaper.jpg" 
             alt="Background" 
-            className="w-full h-full object-cover"
+            fill={true}
+            quality={100}
+            priority={true}
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/50 backdrop-blur-md" />
         </div>
@@ -49,7 +87,7 @@ export default function Home() {
           <motion.div
             variants={container}
             initial="hidden"
-            animate="show"
+            animate={isLoading ? "hidden" : "show"}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto"
           >
             {/* Left Side */}

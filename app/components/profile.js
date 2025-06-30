@@ -10,22 +10,18 @@ const Profile = () => {
 
       <div className="relative z-10 text-white space-y-3">
         <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Hello, I&apos;m Khairulazhar, still Intern
+          Hello, I&apos;m Khairulazhar
         </h1>
-        
+
         <p className="text-gray-300">
-          IT Diploma Graduate specializing in web development with Laravel and React.
+          I enjoy building modern web applications and am currently exploring
+          AI/ML to expand my skills. I&apos;m especially interested in how AI
+          can improve development workflows and user experiences.
         </p>
-        
+
         <p className="text-gray-300">
-          Passionate about building modern web applications and currently exploring 
-          AI/ML technologies to expand my skill set. I&apos;m particularly interested in 
-          how artificial intelligence can enhance web development workflows and user experiences.
-        </p>
-        
-        <p className="text-gray-300">
-          Committed to continuous learning and staying updated with emerging technologies 
-          in both web development and machine learning fields.
+          I&apos;m committed to continuous learning and staying updated with the
+          latest technologies in web development and machine learning.
         </p>
 
         {/* Optional glowing effect on hover */}
